@@ -12,9 +12,10 @@ PY32F002X,PY32F002Z - ещё урезанные 8K/16K - Flash size;
 Flash/RAM:  24K/3K 
 Max Frequency: 48 MHz
   HSI - 24; 48 MHz (есть калибровочные константы)
-  LSI - 32.768kHz (есть калибровочная константа)
-  LSE - 0-1000kHz  (not in: qfn16, sop8 )
-  HSE - Ext Clock only IN (1-32MHz) (PA6)
+  LSI - 32.768kHz (есть калибровочные константы)
+        ( в RM - есть описание что есть ещё 38.4 kHz - константа)
+  LSE - 0-1000kHz  (not in: qfn16, sop8 ) (PC1,PB7)
+  HSE - Ext Clock (input) (1-32MHz) (PA6)
 OTP: 128 byte
 IWDG, SysTick
 Timers (16b): Adv:1, GP:1, LP:1, 
@@ -25,7 +26,7 @@ Low power modes: Sleep/Stop/DeepStop
 User configuration Bootload region and code. (max 4K)
 1.7 - 5.5 V
 
-not DMA,RTC,WWDG,Bootloader
+not PLL,DMA,RTC,WWDG,Bootloader
 ```
 
 Дополнительные сведения по серии из [Factory Config](./FactoryConfig/README.md)
@@ -84,7 +85,7 @@ sop8        e=1,27  (F002BL15Sx)
 1. ST-Link V2
 ```
 Keil  - работает без проблем
-pyocd - ?? в основном работает (кроме режима стирания при Reset или подаче питания) 
+pyocd - в основном работает (кроме режима стирания при Reset или подаче питания) 
 ```
 
 2. J-Link OB (из BluePill STM32F103)
@@ -104,14 +105,14 @@ Keil  - работает, только есть ошибка при стиран
         если разделить стирание - отдельно, 
         заливка (без стирания) - отдельно
         то всё нормально! 
-pyocd  - прошивка, стирание - работает и даже при подаче питания стирать можно        
+pyocd  - прошивка, стирание - работает (??  при reset и подаче питания стирать - пока не получается)        
 ```
 
 ### Утилиты 
 
 1. Py32CubeProgrammer
 ```
-?? работает с J-Link 
+работает с J-Link 
 через UART нет возможности - нет системной прошивки bootloader-а 
 ```
 
