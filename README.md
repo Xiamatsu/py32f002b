@@ -56,7 +56,7 @@ sop14       e=1,27  (F002BD15Sx)
 sop8        e=1,27  (F002BL15Sx)
 ```
 
-<img src="./images/chip_py32f002bf15p6.png" alt="drawing" width="200"/>
+<img src="./images/py32f002b.png" alt="drawing" width="200"/>
 
 
 ### Демоплаты
