@@ -185,4 +185,16 @@ HSi = 12.9 MHz
 
 4. GPIO PA7 - выдаёт MCO - ~ до 35 MHz 
 
+5. При старте системы  HSI_FS = 0b100 (24M)  HSI_TRIM = 0x1100  (25.44 MHz)
+       откуда это значение - непонятно 
+    Factory Config  [0x1FFF0100] = 0x00008BA7  
+                       HSI_FS = 0b100 (24M)  HSI_TRIM = 0x0BA7  (24.68 MHz) 
+    Factory Config  [0x1FFF0104] = 0x0000B3A2  
+                       HSI_FS = 0b101 (48M)  HSI_TRIM = 0x13A2  (49.60 MHz) 
+
+    есть ещё конствнта
+    [0x1FFF01A0] = 0x8F11 (16bit)  
+        HSI_FS = 0b100 (24M)  HSI_TRIM = 0x0F11  (24.42 MHz) 
+
+    оказалась более ближе к 24 МГц
 ```
