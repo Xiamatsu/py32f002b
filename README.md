@@ -153,19 +153,19 @@ HSi = 12.9 MHz
             max1  - TRIM_L = 0x1FF   TRIM_H = 0
 
    TRIM_H - задаёт % изменения к существующему от min до max1
-            TRIM_H = 0b0001    ~ 4%
-            TRIM_H = 0b0010    ~ 9%
-            TRIM_H = 0b0100    ~ 19%
-            TRIM_H = 0b0101    ~ 25%
-            TRIM_H = 0b0110    ~ 33%
-            TRIM_H = 0b0111    ~ 41%
-            TRIM_H = 0b1000    ~ 50%
-            TRIM_H = 0b1001    ~ 60%
-            TRIM_H = 0b1010    ~ 70%
-            TRIM_H = 0b1100    ~ 100%
-            TRIM_H = 0b1101    ~ 119%
-            TRIM_H = 0b1110    ~ 137%
-            TRIM_H = 0b1111    ~ 165%
+            TRIM_H = 0b0001   + ~ 4%
+            TRIM_H = 0b0010   + ~ 9%
+            TRIM_H = 0b0100   + ~ 19%
+            TRIM_H = 0b0101   + ~ 25%
+            TRIM_H = 0b0110   + ~ 33%
+            TRIM_H = 0b0111   + ~ 41%
+            TRIM_H = 0b1000   + ~ 50%
+            TRIM_H = 0b1001   + ~ 60%
+            TRIM_H = 0b1010   + ~ 70%
+            TRIM_H = 0b1100   + ~ 100%
+            TRIM_H = 0b1101   + ~ 119%
+            TRIM_H = 0b1110   + ~ 137%
+            TRIM_H = 0b1111   + ~ 165%
 
             max2  -  TRIM_L = 0x1FF   TRIM_H = 0b1111         
 
