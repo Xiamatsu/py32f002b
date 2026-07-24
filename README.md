@@ -109,7 +109,8 @@ Firmware - только другое --> [Firmware 1.2.1](https://www.puyasemi.c
 
 ### PY32CubeProgrammer
 
-исправленная последняя версия в папке Soft
+исправленная последняя версия в папке Soft 
+[PY32CubeProgrammer](./Soft/PY32CubeProgrammer_V1.0.9496.39072A.zip)
 
 сейчас на сайте PUYA  новая версия  PY32Programmer, которая не поддерживает JLink
 
