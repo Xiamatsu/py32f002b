@@ -107,6 +107,12 @@ Pinouts можно здесь найти для PY32F002B
 Полностью подобно как и для семейства PY32F002A;F003;F030<br>
 Firmware - только другое --> [Firmware 1.2.1](https://www.puyasemi.com/download_path/%E5%BA%93%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BE%8B%E7%A8%8B/MCU%20%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/PY32F002B_Firmware_V1.2.1.zip) / на 22.09.2025
 
+### PY32CubeProgrammer
+
+исправленная последняя версия в папке Soft
+
+сейчас на сайте PUYA  новая версия  PY32Programmer, которая не поддерживает JLink
+
 ### edbg
 
 исправленная и дополненная версия
