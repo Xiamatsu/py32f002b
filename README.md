@@ -96,7 +96,10 @@ sop8        e=1,27  (F002BL15Sx)
 Скромный выбор ремапинга функций портов (альтернативные функции)<br>
   (обусловлено небольшим количеством периферии)<br>
 Индивидуально можно настроить каждый пин до 8 функций.<br>
-Шаблон возможных вариантов ( в разработке )<br>
+
+Pinouts можно здесь найти для PY32F002B
+
+[Схемы распиновки](https://github.com/Xiamatsu/MCU_Pinout)
 
 
 ### Программаторы, Утилиты, IDE 
@@ -104,7 +107,55 @@ sop8        e=1,27  (F002BL15Sx)
 Полностью подобно как и для семейства PY32F002A;F003;F030<br>
 Firmware - только другое --> [Firmware 1.2.1](https://www.puyasemi.com/download_path/%E5%BA%93%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BE%8B%E7%A8%8B/MCU%20%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/PY32F002B_Firmware_V1.2.1.zip) / на 22.09.2025
 
+### edbg
 
+исправленная и дополненная версия
+[edbg](https://github.com/Xiamatsu/edbg)
+скомпилированный вариант для Windows
+[edbg.exe](https://disk.yandex.ru/d/82thvfnrF28y9Q/Soft/edbg.exe)
+```
+работает только с CMSIS-DAP 
+( WCH-LinkE; SLogic Combo; DAP-Link(f072) )
+настроена на работу с PY32F002A+, PY32F002B
+// исправлено от оригинальной версии
+// - с PY32F002B  - не работало совсем, добавлен другой target - py32f002b
+// - с PY32F002A+ - настроено на работу со всеми чипами и с определением чипа
+//                  из Factory Config и размера флеша
+//                  изменился target - py32f0xx
+
+принимает только бинарные файлы *.bin
+есть возможность работать с Option Bytes (lock, unlock) и по отдельности
+Нормально проходит lock (RDP Level 1) и unlock (RDP Level 0)
+  только после данных команд надо отключать питание !
+
+ПРИМЕРЫ:
+ прошивка
+   edbg -b -t py32f002b -p -f <filename.bin>
+
+ прошивка на частоте 1МГц (по умолчанию 16МГц)
+   edbg -b -t py32f002b -c 1000 -p -f <filename.bin>
+
+ чтение
+   edbg -b -t py32f002b -r -f <filename.bin>
+
+ стирание 
+   edbg -b -t py32f002b -e
+
+ стирание на частоте 1МГц со сбросом 10мс
+   edbg -b -t py32f002b -e -c 1000 -x 10
+
+ прошивка с блокировкой
+   edbg -b -t py32f002b -p -k -f <filename.bin>
+
+ блокировка
+   edbg -b -t py32f002b -k
+
+ разблокировка
+   edbg -b -t py32f002b -u
+
+ чтение option bytes (все 4 байта)
+   edbg -b -t py32f002b -F r0,:,
+```
 
 ### Интересные тесты
 
