@@ -90,6 +90,7 @@ sop8        e=1,27  (F002BL15Sx)
 
 <img src="./images/embedfire_py32f002bf15u6.png" alt="drawing" width="350"/>
 
+Схемы и описания демоплат в папке - [DemoBoard](./DemoBoard/)
 
 ### Ремапинг 
 
